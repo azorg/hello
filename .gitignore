@@ -1,0 +1,8 @@
+*.d
+*.o
+.dep
+.obj
+hello
+hello.exe
+hello.ini
+

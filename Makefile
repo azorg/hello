@@ -1,16 +1,16 @@
 #----------------------------------------------------------------------------
 OUT_NAME    := hello
 OUT_DIR     := .
-CLEAN_FILES := "$(OUT_DIR)/$(OUT_NAME).exe" a.out
+CLEAN_FILES := "$(OUT_DIR)/$(OUT_NAME).exe" a.out "hello.ini"
 #----------------------------------------------------------------------------
 # 1-st way to select source files
-#SRCS := hello.c lib.c
+SRCS := hello.c lib.c clib/str.c clib/ini.c
 
-#HDRS := lib.h
+HDRS := lib.h clib/str.h clib/ini.h
 
 # 2-nd way to select source files
-SRC_DIRS := .
-HDR_DIRS := .
+#SRC_DIRS := . clib
+#HDR_DIRS := . clib
 #----------------------------------------------------------------------------
 #INC_DIRS  := include 
 #INC_FLAGS := -Iinclude
