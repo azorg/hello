@@ -23,7 +23,7 @@ int main(int argc, const char *argv[])
   // call procedure from fake module `lib'
   lib_print_hello(str_c(&msg));
 
-  // write to INI fil
+  // write to INI file
   ini_write_str(&ini, "hello", "msg", str_c(&msg));
 
   // free memory from `msg` (It is old good C, not C++/Java/Python/Go/C#)
