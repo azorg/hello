@@ -1,0 +1,110 @@
+ChangeLog of simple C/C++ library "clib"
+ + added
+ - removed
+ * changed
+
+2015.08.31
+ * change printf format double (%.16g)
+
+2015.02.14
+ + add:
+     void str_to_lower_case(str_t *s);
+     void str_to_upper_case(str_t *s);
+     int str_cmp(const str_t *s1, const str_t *s2);
+     int str_icmp(const str_t *s1, const str_t *s2);
+     int str_icmp_c(const str_t *s1, const char *s2);
+     int str_icmp_cc(const char *s1, const str_t *s2);
+
+
+2015.02.13
+ + aclass::aini - add default values = 0 to read_* functions
+
+2015.02.12
+ + add fsize.h/fsize.c module
+
+2015.02.01
+ + add GPLv2 license (COPYING) 
+ * format text
+
+2015.01.30
+ * ini_t: fix new bug if INI_EQ undefined
+ * str_t: update int64 printf() format
+
+2015.01.29
+ * set version tag v0.2b
+
+2015.01.26
+ + add "doc" directory
+ * ini_t: allow whitespaces inside ident (keys)
+ * upgrade Makefiles and Makefile.skel
+ * midify unit test `str_t` (str_hex(), str_to_long_cstyle(), ...)
+ * test `str_t` under Visual Studio / MinGW and fix bugs (near vsnprintf() again)
+ * fix some bugs with int64
+
+2015.01.24
+ * str_t: fix supposed bug with vsnprintf() under Windows
+ * str_t: add '_' preffix to protected variables and functions
+ * add ".gitignore" file
+
+2015.01.23
+ * fix very old bug with secondary uses va_list is str.c (use va_copy)
+
+2015.01.22
+ * back files from old backup and download to github with old bugs
+
+2010.06.20
+ * str_t: str_to_bool("0") = false, str_to_bool(123) = true
+
+2010.05.22
+ * ini_t: return default value (float/double/int/bool) if string is empty
+
+2008.08.02
+ + add str_init_vsprintf(), str_vsprintf(), str_init_sprintf(), str_sprintf()
+ - remove using snprintf() in str.h/str.c
+ + add str_get_size() like str_size()
+ + add str_ptr() like str_data()
+ * fix BUG in str_delete()
+
+2008.04.07
+ + add aini.h (C++ binding for ini_t)
+
+2008.03.22
+ * fix bug near "static" & "inline" again in str.h
+ + add ini_set_state() то ini.h
+ - delete unused line in ini_decode_str()...
+
+2008.03.06
+ + add <stdbool.h> support in `str_t`
+
+2008.02.07
+ + add ini_has_section() and ini_has_ident() methods in `ini_t`
+
+2008.02.06
+ * fix bug with end of file whithout CR
+
+2007.11.07
+ + add str_hex2bin()/str_bin2hex() in `str_t`
+ + add ini_read_bin()/ini_write_bin() in `ini_t`
+
+2007.11.04
+ + add STR_INLINE and INI_INLINE macro
+
+2007.11.04
+ * rename `inifile_t` to `ini_t`, inifile.c to ini.c and inifile.h to ini.h
+ + add str_to_int64 in `str_t`
+ + str_init_int64_hex() and str_int64_hex()
+ + add support int64 in `ini_t`
+
+2007.11.03
+ * modify bool support in `str_t`
+ + add str_init_size_cstr() function
+ + first test `inifile_t` with read/write
+ + add code/decode string in inifile_write_str() and inifile_read_str()
+
+2007.11.01
+ + work with inifile.c/inifile.h + tests...
+ * fix memory bug in str_to_long_ex() and...
+
+2007.02.20
+ + begin project (`str_t` and `inifile_t` C class)
+
